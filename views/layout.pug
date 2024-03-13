@@ -1,0 +1,29 @@
+doctype html
+html(lang='en')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+    script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    header.header
+      nav#navbar.navbar.navbar-expand-lg.navbar-light.bg-light
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            a.nav-link(href='/') Home
+          li.nav-item
+            a.nav-link(href='/catalog/items') All items
+          li.nav-item
+            a.nav-link(href='/catalog/categories') All categories
+    main#content.container
+      block content
+    footer.footer
+      nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            a.nav-link(href='/catalog/item/create') Create Item
+          li.nav-item
+            a.nav-link(href='/catalog/category/create') Create Category
