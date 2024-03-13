@@ -12,7 +12,7 @@ const catalogRouter = require('./routes/catalog');
 const app = express();
 
 // Connect to MongoDB
-mongoose.connect('', {
+mongoose.connect('mongodb://', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
